@@ -54,3 +54,10 @@ services:
       - "ETCD_INITIAL_CLUSTER=node1=http://0.0.0.0:2380"
       - "ETCD_NAME=node1"
       - "ETCD_DATA_DIR=/opt/bitnami/etcd/data"
+     networks:
+      gogs_app:
+        aliases:
+          - etcd
+ networks:
+  gogs_app:
+    driver: bridge
